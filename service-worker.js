@@ -1,14 +1,39 @@
-const CACHE_NAME = 'dexogen-cache-v2'; // Update version
+const CACHE_NAME = 'dexogen-cache-v2';
 const urlsToCache = [
   '/',
   '/index.html',
-  '/styles.css',
-  '/assets/images/icon-192x192.png',
-  '/assets/images/icon-512x512.png',
+  '/manifest.json',
+  '/offline.html',
+  
+  // CSS files
+  '/assets/css/css2.css',
+  '/assets/css/plyr.css',
+  '/assets/css/style.min.css',
+  '/assets/css/swiper-bundle.min.css',
+  
+  // JavaScript files
   '/assets/js/script.js',
   '/assets/js/main.min.js',
+  
+  // Images
+  '/assets/images/favicon.ico',
+  '/assets/images/29.png',
+  '/assets/images/29.1.jpg',
+  '/assets/images/29.2.jpg',
+  '/assets/images/29.3.jpg',
+  '/assets/images/29.4.jpg',
   '/assets/images/video.mp4',
-  '/offline.html', // Add an offline fallback page
+  '/assets/images/unnamed.webp',
+  
+  // App icons for different sizes
+  '/assets/images/29.png?s=192x192',
+  '/assets/images/29.png?s=152x152',
+  '/assets/images/29.png?s=180x180',
+  '/assets/images/29.png?s=167x167',
+  '/assets/images/29.png?s=150x150',
+  '/assets/images/29.png?s=300x300',
+  '/assets/images/29.png?s=240x240',
+  '/assets/images/29.png?s=48x48'
 ];
 
 // Install the service worker and cache assets
