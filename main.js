@@ -1,10 +1,11 @@
-// main.js
 if ('serviceWorker' in navigator) {
-    navigator.serviceWorker.register('/service-worker.js')
-        .then(function(registration) {
-            console.log('Service Worker registratsiya qilindi:', registration);
-        })
-        .catch(function(error) {
-            console.log('Service Worker registratsiya qilishda xato:', error);
-        });
+    window.addEventListener('load', () => { // Ensure it's registered after page loads
+        navigator.serviceWorker.register('/service-worker.js')
+            .then((registration) => {
+                console.log('Service Worker registered:', registration);
+            })
+            .catch((error) => {
+                console.log('Service Worker registration failed:', error);
+            });
+    });
 }
