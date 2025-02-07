@@ -1,4 +1,4 @@
-const CACHE_NAME = 'dexogen-cache-v1';
+const CACHE_NAME = 'dexogen-cache-v2'; // Update version
 const urlsToCache = [
     '/',
     '/index.html',
@@ -49,10 +49,6 @@ self.addEventListener('fetch', (event) => {
 
                         return response;
                     })
-                    .catch(() => {
-                        // Serve offline page if network fails
-                        return caches.match('/offline.html');
-                    });
             })
     );
 });
